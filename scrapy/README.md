@@ -22,6 +22,11 @@ En la siguiente carpeta se encuentran proyectos donde se extrae información uti
 └── README.md
 ```
 
+Seleccione las siguientes rutas para ser redirigido hacia ellas:
+
+- [books_spider](books_spider.py)
+- [README](README.md)
+
 ## 🔧 Configuración
 
 Creación y activacion del entorno virtual
@@ -35,6 +40,8 @@ source venv/bin/activate
 # 🚀 Ejemplos de proyectos incluidos
 
 ## 📚 [books to scrape](https://books.toscrape.com/)
+
+- [books_spider](books_spider.py)
 
 Página con información de diferentes tipos de libros.
 Para este caso se hará uso de una araña y no un proyecto Scrapy, con el fin de mostrar como es un script simple utilizando dicho framework.

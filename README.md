@@ -46,6 +46,15 @@ Cada carpeta del repositorio contiene un proyecto que aprovecha uno o varios fra
 └── docs/           # Documentación adicional, referencias y buenas prácticas
 ```
 
+Seleccione la carpeta para ser redirigido hacia ella:
+
+- [scrapy](scrapy)
+- [selenium](selenium)
+- [playwright](playwright)
+- [apis](apis)
+- [notebooks](notebooks)
+- [docs](docs)
+
 ## 🚀 Ejemplos de proyectos incluidos
 
 - 📚 books.toscrape.com: Scraping básico de libros con Scrapy
