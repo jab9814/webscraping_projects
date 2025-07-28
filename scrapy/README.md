@@ -2,6 +2,10 @@
 
 En la siguiente carpeta se encuentran proyectos donde se extrae información utilizando el Framework [Scrapy](https://scrapy.org/).
 
+<!-- # Indice
+
+- []() -->
+
 ## 🎯 Objetivo
 
 - Utilizar Scrapy desde una simple araña hasta la creación de un proyecto para el uso que nos ofrece Scrapy.
@@ -14,7 +18,7 @@ En la siguiente carpeta se encuentran proyectos donde se extrae información uti
 
 ```bash
 .
-├── project_a/
+├── quotes/
 ├── project_b/
 ├    ...
 ├── project_c/
@@ -24,8 +28,9 @@ En la siguiente carpeta se encuentran proyectos donde se extrae información uti
 
 Seleccione las siguientes rutas para ser redirigido hacia ellas:
 
-- [books_spider](books_spider.py)
 - [README](README.md)
+- [books_spider](books_spider.py)
+- [quotes](quotes)
 
 ## 🔧 Configuración
 
@@ -35,6 +40,9 @@ Creación y activacion del entorno virtual
 # Ejemplo para el framework Scrapy. Creacion y activacion del entorno virtual
 python -m venv venv
 source venv/bin/activate
+
+# Instalacion de paquetes en el entorno virtual
+pip install -r requirements.txt     
 ```
 
 # 🚀 Ejemplos de proyectos incluidos
@@ -44,6 +52,7 @@ source venv/bin/activate
 - [books_spider](books_spider.py)
 
 Página con información de diferentes tipos de libros.
+
 Para este caso se hará uso de una araña y no un proyecto Scrapy, con el fin de mostrar como es un script simple utilizando dicho framework.
 
 Para la ejecución de la araña simplemente se debe ejecutar el siguiente comando *(nota: Recordar tener activo el entorno virtual)*
@@ -74,6 +83,48 @@ Se puede observar un ejemplo del libro [A Light in the Attic](https://books.tosc
 
 ## 💭 [quotes](https://quotes.toscrape.com/)
 
+- [quotes](quotes/)
+
+✨📝 [Quotes](https://quotes.toscrape.com/)  es el sitio web con citas populares de diferentes autores sobre diversos temas...
+
+En esta ocasión utilizaremos el comando que nos ofrece scrapy: startproject, con el fin de extraer la información de la página pero mediante un proyecto estructurado con dicho framework.
+
+Veremos los cambios que se realizaron a ciertos módulos del proyecto:
+
+- Configuraciones en el setting.py
+- Configuraciones en el pipelines.py
+- Configuraciones de los campos a extraer mediante items.py
+- Creación de modelos con Enum, enum_models.py
+- Como se puede iniciar una sesión en la página y la extracción de la información, quotes_spider.py
+
+Toda la información necesaria se encuentra en el siguiente enlace: [quotes](quotes/)
+
+## 🍾 [whiskyshop](https://www.whiskyshop.com/scotch-whisky?item_availability=In+Stock)
+
 En proceso… 🛠
 
 <img src="https://user-images.githubusercontent.com/74038190/216122049-276bc7a5-c760-4849-805a-995d8fa6ea13.png" alt="Eleven O’Clock" width="120" />
+
+
+
+
+<!-- 
+Para futuras pruebas donde es bueno utilizar Backoff automaticos
+
+# Habilitar reintentos
+RETRY_ENABLED = True
+
+# Número máximo de intentos por request fallido
+RETRY_TIMES = 3
+
+# Códigos HTTP que activan reintento
+RETRY_HTTP_CODES = [500, 502, 503, 504, 522, 524, 408, 429]
+
+# Tiempo entre requests (en segundos)
+DOWNLOAD_DELAY = 1
+
+# Puedes habilitar AutoThrottle para un control dinámico
+AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_START_DELAY = 1
+AUTOTHROTTLE_MAX_DELAY = 60
+AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0 -->
