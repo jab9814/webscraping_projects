@@ -57,7 +57,7 @@ Una vez ejecutada la araña y finalizado el proceso de extracción, se creará u
 
 ## Ejemplo de la información extraída
 
-Desde la pagina de se observa la extraccion en formato .json la siguiente cita:
+Desde la pagina se observa la extraccion, en formato .json, la siguiente cita:
 
 - *[Cita de Steve Martin](http://quotes.toscrape.com/author/Steve-Martin/)*
 

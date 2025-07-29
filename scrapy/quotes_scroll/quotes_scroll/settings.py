@@ -1,4 +1,4 @@
-# Scrapy settings for quotes project
+# Scrapy settings for quotes_scroll project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,35 +7,53 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "quotes"
+from quotes_scroll.enum_models import ConfigGeneral
 
-SPIDER_MODULES = ["quotes.spiders"]
-NEWSPIDER_MODULE = "quotes.spiders"
+
+BOT_NAME = "quotes_scroll"
+
+SPIDER_MODULES = ["quotes_scroll.spiders"]
+NEWSPIDER_MODULE = "quotes_scroll.spiders"
 
 ADDONS = {}
 
 LOG_LEVEL = 'INFO'
 FEEDS = {
-    'data/quotes.json': {
-        'format': 'json',
-        'encoding': 'utf8',
-        'store_empty': True,
-        'overwrite': True,
+    ConfigGeneral.EXTRACTOR_DOCUMENT_NAME_PATH.value: {
+        'format': ConfigGeneral.FORMAT.value,
+        'encoding': ConfigGeneral.ENCODING.value,
+        'store_empty': ConfigGeneral.STORE_EMPTY.value,
+        'overwrite': ConfigGeneral.OVERWRITE.value,
         "indent": 4,
     },
 }
 
+# Habilitar reintentos
+RETRY_ENABLED = True
+
+# Número máximo de intentos por request fallido
+RETRY_TIMES = 3
+
+# Códigos HTTP que activan reintento
+RETRY_HTTP_CODES = [500, 502, 503, 504, 522, 524, 408, 429]
+
+# Puedes habilitar AutoThrottle para un control dinámico
+AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_START_DELAY = 0.5
+AUTOTHROTTLE_MAX_DELAY = 60
+AUTOTHROTTLE_TARGET_CONCURRENCY = 1.5
+CONCURRENT_REQUESTS_PER_DOMAIN = 2
+DOWNLOAD_DELAY = 0.2
+RANDOMIZE_DOWNLOAD_DELAY = 0.5
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "quotes (+http://www.yourdomain.com)"
+#USER_AGENT = "quotes_scroll (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
 # Concurrency and throttling settings
 #CONCURRENT_REQUESTS = 16
-# CONCURRENT_REQUESTS_PER_DOMAIN = 1
-# DOWNLOAD_DELAY = 1
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
@@ -52,13 +70,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "quotes.middlewares.QuotesSpiderMiddleware": 543,
+#    "quotes_scroll.middlewares.QuotesScrollSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "quotes.middlewares.QuotesDownloaderMiddleware": 543,
+#    "quotes_scroll.middlewares.QuotesScrollDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -70,7 +88,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "quotes.pipelines.QuotesPipeline": 300,
+   "quotes_scroll.pipelines.QuotesScrollPipeline": 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

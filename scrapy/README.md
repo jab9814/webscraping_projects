@@ -110,7 +110,8 @@ Toda la información necesaria se encuentra en el siguiente enlace: [quotes](quo
 
 - 💭 [quotes with scroll](quotes_scroll/)
 
-Aunque la pagina sigue siendo similar a [quotes](#quotes), en esta ocasión difiere en que las demás citas solo se pueden observar si se realiza un scroll a la página.
+Aunque la pagina sigue siendo similar a [quotes](#quotes), en esta ocasión difiere en que las demás citas, solo se pueden observar si se realiza un scroll a la página.
+Ademas, la API contiene la pagina [goodreads](https://www.goodreads.com/) que nos ofrece informacion sobre el autor de la cita.
 
 Veremos los cambios que se realizaron a ciertos módulos del proyecto, pero manteniendo los cambios del proyecto [quotes](#quotes), con ciertas variaciones
 
@@ -119,29 +120,8 @@ Veremos los cambios que se realizaron a ciertos módulos del proyecto, pero mant
 - El archivo salida será directamente un csv
 - Configuraciones en el pipelines.py con el fin de manipular el csv después de su extracción
 - Parámetros de entrada a la araña con el fin de indicar si_
-    - Se solo se desea realizar la extracción de la información.
-    - Se desea realizar el refinado de la información extraída.
+    - Si solo se desea realizar la extracción de la información.
+    - Si desea realizar el refinado de la información extraída.
     - Realizar ambas
 
 Toda la información necesaria se encuentra en el siguiente enlace: [quotes with scroll](quotes_scroll/)
-
-<!-- 
-Para futuras pruebas donde es bueno utilizar Backoff automaticos
-
-# Habilitar reintentos
-RETRY_ENABLED = True
-
-# Número máximo de intentos por request fallido
-RETRY_TIMES = 3
-
-# Códigos HTTP que activan reintento
-RETRY_HTTP_CODES = [500, 502, 503, 504, 522, 524, 408, 429]
-
-# Tiempo entre requests (en segundos)
-DOWNLOAD_DELAY = 1
-
-# Puedes habilitar AutoThrottle para un control dinámico
-AUTOTHROTTLE_ENABLED = True
-AUTOTHROTTLE_START_DELAY = 1
-AUTOTHROTTLE_MAX_DELAY = 60
-AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0 -->
