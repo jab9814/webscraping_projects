@@ -1,12 +1,16 @@
-# 🕷️ Web Scraping Projects with Scrapy
+# Web Scraping Projects with Scrapy
 
-En la siguiente carpeta se encuentran proyectos donde se extrae información utilizando el Framework [Scrapy](https://scrapy.org/).
+🕷️ En la siguiente carpeta se encuentran proyectos donde se extrae información utilizando el Framework [Scrapy](https://scrapy.org/).
 
-<!-- # Indice
+# Indice
 
-- []() -->
+- [Web Scraping Projects with Scrapy](#web-scraping-projects-with-scrapy)
+- [Objetivo](#objetivo)
+- [Estructura de la carpeta scrapy](#estructura-de-la-carpeta-scrapy)
+- [Configuración](#configuración)
+- [Ejemplos de proyectos incluidos](#ejemplos-de-proyectos-incluidos)
 
-## 🎯 Objetivo
+## Objetivo
 
 - Utilizar Scrapy desde una simple araña hasta la creación de un proyecto para el uso que nos ofrece Scrapy.
 
@@ -14,27 +18,26 @@ En la siguiente carpeta se encuentran proyectos donde se extrae información uti
 
 - Diferentes modelos de paginas para la extracción de la información según sea el caso (html, API, xmls, ...)
 
-## 📁 Estructura de la carpeta scrapy
+## Estructura de la carpeta scrapy
 
 ```bash
 .
-├── quotes/
-├── project_b/
-├    ...
-├── project_c/
 ├── books_spider.py
+├── quotes/
+├── quotes_scroll/
 └── README.md
 ```
 
-Seleccione las siguientes rutas para ser redirigido hacia ellas:
+📁 Seleccione las siguientes rutas para ser redirigido hacia ellas:
 
 - [README](README.md)
 - [books_spider](books_spider.py)
 - [quotes](quotes)
+- [quotes con scroll indefinido](quotes_scroll)
 
-## 🔧 Configuración
+## Configuración
 
-Creación y activacion del entorno virtual
+🔧 Creación y activacion del entorno virtual
 
 ```bash
 # Ejemplo para el framework Scrapy. Creacion y activacion del entorno virtual
@@ -45,11 +48,15 @@ source venv/bin/activate
 pip install -r requirements.txt     
 ```
 
-# 🚀 Ejemplos de proyectos incluidos
+## Ejemplos de proyectos incluidos
 
-## 📚 [books to scrape](https://books.toscrape.com/)
+- [books to scrapy](#books-to-scrape). Script .py
+- [quotes](#quotes). Proyecto scrapy con modificaciones en los módulos.
+- [quotes with scroll](#quotes-with-scroll) Proyecto scrapy con modificaciones en los módulos y enviar parámetros via consola
 
-- [books_spider](books_spider.py)
+##  [books to scrape](https://books.toscrape.com/)
+
+- 📚 [books_spider](books_spider.py)
 
 Página con información de diferentes tipos de libros.
 
@@ -81,9 +88,9 @@ Se puede observar un ejemplo del libro [A Light in the Attic](https://books.tosc
 },
 ```
 
-## 💭 [quotes](https://quotes.toscrape.com/)
+## [quotes](https://quotes.toscrape.com/)
 
-- [quotes](quotes/)
+- 💭 [quotes](quotes/)
 
 ✨📝 [Quotes](https://quotes.toscrape.com/)  es el sitio web con citas populares de diferentes autores sobre diversos temas...
 
@@ -99,14 +106,24 @@ Veremos los cambios que se realizaron a ciertos módulos del proyecto:
 
 Toda la información necesaria se encuentra en el siguiente enlace: [quotes](quotes/)
 
-## 🍾 [whiskyshop](https://www.whiskyshop.com/scotch-whisky?item_availability=In+Stock)
+## [quotes with scroll](https://quotes.toscrape.com/scroll)
 
-En proceso… 🛠
+- 💭 [quotes with scroll](quotes_scroll/)
 
-<img src="https://user-images.githubusercontent.com/74038190/216122049-276bc7a5-c760-4849-805a-995d8fa6ea13.png" alt="Eleven O’Clock" width="120" />
+Aunque la pagina sigue siendo similar a [quotes](#quotes), en esta ocasión difiere en que las demás citas solo se pueden observar si se realiza un scroll a la página.
 
+Veremos los cambios que se realizaron a ciertos módulos del proyecto, pero manteniendo los cambios del proyecto [quotes](#quotes), con ciertas variaciones
 
+- Manipulación de una API ofrecida por la página
+- Agregar posibles reintentos de peticiones a la pagina o API, mediante el modulo settings.py
+- El archivo salida será directamente un csv
+- Configuraciones en el pipelines.py con el fin de manipular el csv después de su extracción
+- Parámetros de entrada a la araña con el fin de indicar si_
+    - Se solo se desea realizar la extracción de la información.
+    - Se desea realizar el refinado de la información extraída.
+    - Realizar ambas
 
+Toda la información necesaria se encuentra en el siguiente enlace: [quotes with scroll](quotes_scroll/)
 
 <!-- 
 Para futuras pruebas donde es bueno utilizar Backoff automaticos

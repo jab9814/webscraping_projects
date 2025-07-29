@@ -1,18 +1,27 @@
-## 🔍 Proyectos de Web-Scraping 🌐
+# 🔍 Proyectos de Web-Scraping 🌐
 
-## 🕷️ Web Scraping Projects with Python
+## Web Scraping Projects with Python
+🕷️ Bienvenido a este repositorio de proyectos de **Web Scraping con Python**, utilizando tres de las herramientas más potentes en el ecosistema Python:
 
-Bienvenido a este repositorio de proyectos de **Web Scraping con Python**, utilizando tres de las herramientas más potentes en el ecosistema Python:
+- Documentación sobre [Scrapy](https://scrapy.org/)
+- Documentación sobre [Selenium](https://www.selenium.dev/)
+- Documentación sobre [Playwright](https://playwright.dev/python/)
 
-- [Scrapy](https://scrapy.org/)
-- [Selenium](https://www.selenium.dev/)
-- [Playwright](https://playwright.dev/python/)
+## Indice
 
----
+- [Web Scraping Projects with Python](#web-scraping-projects-with-python)
+- [Objetivo](#objetivo)
+- [Frameworks utilizados](#frameworks-utilizados)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Carpetas con los frameworks a utilizar](#carpetas-con-los-frameworks-a-utilizar)
+- [Ejemplos de proyectos incluidos](#ejemplos-de-proyectos-incluidos)
+- [Requisitos](#requisitos)
+- [Configuración](#configuración)
+- [Autor](#autor)
 
-## 🎯 Objetivo
+## Objetivo
 
-El objetivo de este repositorio es proporcionar una colección de **proyectos prácticos** que simulan desafíos reales de web scraping. Aquí encontrarás ejemplos que exploran:
+🎯 El objetivo de este repositorio es proporcionar una colección de **proyectos prácticos** que simulan desafíos reales de web scraping. Aquí encontrarás ejemplos que exploran:
 
 - Páginas con contenido estático (HTML puro)
 - Sitios web dinámicos (JavaScript renderizado en cliente)
@@ -22,7 +31,7 @@ El objetivo de este repositorio es proporcionar una colección de **proyectos pr
 
 ---
 
-## ⚙️ Frameworks utilizados
+## Frameworks utilizados
 
 | Framework   | Uso principal                                                  | Nivel de complejidad |
 |-------------|----------------------------------------------------------------|-----------------------|
@@ -30,11 +39,9 @@ El objetivo de este repositorio es proporcionar una colección de **proyectos pr
 | `Selenium`  | Navegación simulada, manejo de formularios, JS básico          | ⭐⭐⭐                   |
 | `Playwright`| Automatización moderna, scraping de páginas altamente dinámicas| ⭐⭐⭐⭐                  |
 
-Cada carpeta del repositorio contiene un proyecto que aprovecha uno o varios frameworks dependiendo de la complejidad del sitio.
-
 ---
 
-## 📁 Estructura del repositorio
+## Estructura del repositorio
 
 ```bash
 .
@@ -43,31 +50,34 @@ Cada carpeta del repositorio contiene un proyecto que aprovecha uno o varios fra
 ├── playwright/     # Scrapers Playwright para sitios JS-heavy
 ├── apis/           # Ejemplos de uso de APIs públicas y comparación con scraping manual
 ├── notebooks/      # Exploración y análisis de datos con Python
-└── docs/           # Documentación adicional, referencias y buenas prácticas
+└── .gitignore
 ```
 
-Seleccione la carpeta para ser redirigido hacia ella:
+## Carpetas con los frameworks a utilizar
+
+⚙️ Cada carpeta del repositorio contiene un proyecto que aprovecha uno o varios frameworks dependiendo de la complejidad del sitio.
+
+📁 Seleccione la carpeta para ser redirigido hacia ella:
 
 - [scrapy](scrapy)
 - [selenium](selenium)
 - [playwright](playwright)
 - [apis](apis)
 - [notebooks](notebooks)
-- [docs](docs)
 
-## 🚀 Ejemplos de proyectos incluidos
+## Ejemplos de proyectos incluidos
 
-- 📚 books.toscrape.com: Scraping básico de libros con Scrapy
+- 📚 books.toscrape.com: Scraping básico de libros con Scrapy ✅
 
-- 🏠 sitios inmobiliarios: Extraer datos de listados de propiedades con Playwright
+- 🏠 sitios inmobiliarios: Extraer datos de listados de propiedades con Playwright 🛠️ ...
 
-- 🛍️ precios de productos: Monitoreo de precios con Selenium
+- 🛍️ precios de productos: Monitoreo de precios con Selenium 🛠️ ...
 
-- 📊 twitter/reddit: Extracción de contenido público (JS dinámico)
+- 📊 twitter/reddit: Extracción de contenido público (JS dinámico) 🛠️ ...
 
-- 🆚 Comparativa entre scraping vs API pública (JSONPlaceholder)
+- 🆚 Comparativa entre scraping vs API pública (JSONPlaceholder) 🛠️ ...
 
-## ✅ Requisitos
+## Requisitos
 
 - Python 3.9+
 
@@ -75,9 +85,9 @@ Seleccione la carpeta para ser redirigido hacia ella:
 
 - Entorno virtual recomendado
 
-## 🔧 Configuración
+## Configuración
 
-Cada una de las carpetas scraping cuentan con un archivo **requiremnts.txt**. Es necesario crear un entono virtual e instalar las dependencias para utilizar los frameworks para su debida ejecución.
+🔧 Cada una de las carpetas scraping cuentan con un archivo **requiremnts.txt**. Es necesario crear un entono virtual e instalar las dependencias para utilizar los frameworks para su debida ejecución.
 
 Para la creacion y activacion de los entornos virtuales, es necesario encontrarse a nivel del archivo README.md, y ejecutar los siguientes comandos como ejemplo:
 
@@ -104,6 +114,7 @@ source venv/bin/activate
 
 Cada carpeta cuenta con un archivo README.md donde indica como ejecutar cada uno de los proyectos asocidados a la carpeta.
 
-## 🖥️ Autor
-Desarrollado y mantenido por: jab9814
-🔗 GitHub: @jab9814
+## Autor
+
+- 🖥️ Desarrollado y mantenido por: jab9814
+- 🔗 GitHub: @jab9814
