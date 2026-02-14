@@ -89,7 +89,7 @@
 
 🔧 Cada una de las carpetas scraping cuentan con un archivo **requiremnts.txt**. Es necesario crear un entono virtual e instalar las dependencias para utilizar los frameworks para su debida ejecución.
 
-Para la creacion y activacion de los entornos virtuales, es necesario encontrarse a nivel del archivo README.md, y ejecutar los siguientes comandos como ejemplo:
+Para la creación y activación de los entornos virtuales, es necesario encontrarse a nivel del archivo README.md, y ejecutar los siguientes comandos como ejemplo:
 
 ```bash
 # Ejemplo para el framework Scrapy. Creacion y activacion del entorno virtual
@@ -112,9 +112,9 @@ python -m venv venv
 source venv/bin/activate
 ```
 
-Cada carpeta cuenta con un archivo README.md donde indica como ejecutar cada uno de los proyectos asocidados a la carpeta.
+Cada carpeta cuenta con un archivo README.md donde indica como ejecutar cada uno de los proyectos asociados a la carpeta.
 
 ## Autor
 
-- 🖥️ Desarrollado y mantenido por: jab9814
+- 🖥️ Desarrollado y mantenido por: [jab9814](https://github.com/jab9814)
 - 🔗 GitHub: @jab9814
