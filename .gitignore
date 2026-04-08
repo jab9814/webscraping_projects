@@ -209,4 +209,7 @@ __marimo__/
 # Ingnorar carpeta con datos
 *.json
 *.csv
+*.xls
+*.xlsx
 data/
+output/
